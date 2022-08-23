@@ -1,0 +1,235 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bansoft</title>
+    <link rel="stylesheet" href="{% static 'bansoft/style.css' %}">
+    <style>
+        #preloader {
+            background: #000 url("{% static 'bansoft/loading2.gif' %}") no-repeat center center;
+            background-size: 15%;
+            height: 100vh;
+            width:100%;
+            position: fixed;
+            z-index: 100;
+        }
+    </style>
+    
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+</head>
+<body>
+    <div id='preloader'></div>
+    <header>
+        <nav>
+            <div class="logo"><img src="{% static 'bansoft/logo.PNG' %}" alt="logo"></div>
+            <div class="openMenu"><i class="fa fa-bars"></i></div>
+            <ul class="mainMenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="admin/">Admin</a></li>
+                <li><a href="#">Contact</a></li>
+                <div class="closeMenu"><i class="fa fa-times"></i></div>
+                <span class="icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-github"></i>
+                </span>
+            </ul>
+        </nav>
+        <div class="header2">
+            <img src="{% static 'bansoft/logo_2.PNG' %}" alt="logo" class="logo2">
+            <div class="herotext">
+                <h1>AI Chatbots</h1>
+                <p>Automate conversations to accerelate <br>your company</p>
+                <button class="btn">CLICK HERE</button>
+
+            </div>
+    
+        </div>
+        
+    </header>
+    <section class="section">
+        <div class="about">
+            <div class="abouttext">
+                <h1 class="customh1">Bansoft</h1>
+                <h2 class="customh2">About Us</h2>
+                <h3>{{ aboutus.title }}</h3>
+                <p>{{ aboutus.content }}</p>
+                <button class="btn">READ MORE</button>
+            </div>
+            <img src="{% static 'bansoft/ban_00.PNG' %}" alt="">
+        </div>
+        <hr>
+
+        <!---services-->
+        <div class="services">
+            <div class="servicestext">
+                <div>
+                    <h1 class="customh1">Services</h1>
+                    <h2 class="customh2">Services</h2>
+                </div>
+                <button class="btn btn2">MORE SERVICES</button>
+            </div>
+            <hr>
+            <div class="service">
+                <div class="perservice">
+                    <img src="{% static 'bansoft/s_1.PNG' %}" alt="">
+                    <div class="servicetext" class="serviceimage">
+                        <h1>Chatbots & Whatsapp</h1>
+                        <button class="btn btn3">READ MORE</button>
+                    </div>
+                </div>
+
+                <div class="perservice">
+                    <img src="{% static 'bansoft/s_2.PNG' %}" alt="" class="serviceimage">
+                    <div class="servicetext">
+                        <h1>School ERP</h1>
+                        <br>
+                        <br>
+                        <button class="btn btn3">READ MORE</button>
+                    </div>
+                </div>
+
+                <div class="perservice">
+                    <img src="{% static 'bansoft/s_3.PNG' %}" alt="" class="serviceimage">
+                    <div class="servicetext">
+                        <h1>Tailor Made Solutionist</h1>
+                        <button class="btn btn3">READ MORE</button>
+                    </div>
+                </div>
+                <div class="perservice">
+                    <img src="{% static 'bansoft/s_4.PNG' %}" alt="" class="serviceimage">
+                    <div class="servicetext">
+                        <h1>Mobile Apps</h1>
+                        <br>
+                        <br>
+                        <button class="btn btn3">READ MORE</button>
+                    </div>
+                </div>
+
+                <div class="perservice">
+                    <img src="{% static 'bansoft/s_5.PNG' %}" alt="" class="serviceimage">
+                    <div class="servicetext">
+                        <h1>Website & Hosting</h1>
+                     
+                        <button class="btn btn3">READ MORE</button>
+                    </div>
+                </div>
+                <div class="perservice">
+                    <img src="{% static 'bansoft/s_6.PNG' %}" alt="" class="serviceimage">
+                    <div class="servicetext">
+                        <h1>E commerce</h1>
+                        <button class="btn btn3">READ MORE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="last">
+        <div class="testimonial">
+            <h1 class="customh1 test">Testimonial</h1>
+            <h2 class="customh2 chead">Clients Testimonial</h2>
+            <div class="tsection">
+                <div class="testarea">
+                    <i class="fas fa-quote-right testicon1"></i>
+                    <p>Livingstone Kolobeng College is using a software developed by Bansoft for managing our school administration and academic operations. The system provides us features to control our batches, Students, Teachers, examinations, report cards , etc.</p>
+                    <div>
+                        <i class="fas fa-user testicon2"></i>
+                        
+                        <div class="testie">
+                            <h2>Nilima Bakaya</h2>
+                            <h3>PRINCIPAL</h3>
+                            <p>Livingstone Kolobeng College</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="{% static 'bansoft/testie.PNG' %}" alt="">
+
+            </div>
+
+
+        </div>
+        <div class="talk">
+            <form>
+                <select id="servicess" name="servicess">
+                    <option value="interested">I'm interested in</option>
+                    <option value="Chatbot">Chatbot</option>
+                    <option value="CRM">CRM</option>
+                    <option value="Hosting">Hosting</option>
+                  </select>
+                  <button class="btn btn4">CONTINUE</button>
+            </form>
+
+        </div>
+
+        <div class="contacts">
+            <div class="conthead">
+                <h1 class="customh1">Contact</h1>
+                <h2 class="customh2">Contact Details</h2>
+            </div>
+            
+            <div class="contarea">
+                <img src="{% static 'bansoft/contact.PNG' %}" alt="" class="cimage">
+                <div class="contsec">
+                    <i class="fas fa-at"></i>
+                    <h3>Discreet(Pty)Ltd T/A BANSOFT</h3>
+                    <div class="location">
+                        <i class="fas fa-map-marked-alt cicon"></i>
+                        <p class="cp">Plot 51554, Unit 7, Gaborone west Industrial, Gaborone, Botswana</p>
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-mail-bulk cicon"></i>
+                        <p class="cp">PO BOX 81748, Gaborone, Botswana</p>
+                    </div>
+                    <div class="dial">
+                        <div class="location">
+                            <i class="fas fa-phone-volume cicon"></i>
+                            <p class="cp">(267) 311 1737</p>
+                        </div>
+                        <div class="location">
+                            <i class="fas fa-print cicon"></i>
+                            <p class="cp">(267) 397 4555</p>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-envelope cicon"></i>
+                        <p class="cp">sales@bansoft.co.bw</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <img src="{% static 'bansoft/footerlogo.PNG' %}" alt="">
+        <div class="rights" >
+            <p>Copyright © 2022 Discreet (Pty) Ltd. </p>
+            <p>Designed and Developed by Bansoft</p>
+
+        </div>
+        <div class="footericons">
+           <a><i class="fab fa-facebook fb"></i></a> 
+           <a><i class="fab fa-whatsapp what"></i></a>
+           <a><i class="fas fa-envelope mail"></i></a>
+        </div>
+    </footer>
+        
+
+    <script src="{% static 'bansoft/app.js' %}"></script>
+    <script>
+        let loader = document.getElementById("preloader")
+        window.addEventListener("load", ()=>{
+            loader.style.display="none";
+        })
+    </script>
+</body>
+</html>
